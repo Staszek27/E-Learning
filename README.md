@@ -17,7 +17,7 @@ za pomoca manage.py w biezacym folderze
 - show_recent [days]
 - help
 - open [id]
-
+- update_git
 za pomoca manage.py w folderze roboczym
 - add [cpp / c / py / txt / in / out]
 - add_as_material [filename] 
