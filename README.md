@@ -15,9 +15,11 @@ za pomoca manage.py w biezacym folderze
 - add_project   
 - show_todo
 - show_recent [days]
+- status
 - help
-- open [id]
+- open [name]
 - update_git
+
 
 za pomoca manage.py w folderze roboczym
 
@@ -25,3 +27,4 @@ za pomoca manage.py w folderze roboczym
 - add_as_material [filename] 
 - send [email]
 - done
+- show_dates
