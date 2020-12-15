@@ -14,7 +14,7 @@ za pomoca manage.py w biezacym folderze
 - add_normal    -m "co to jest"
 - add_project   -m "co to jest"
 - show_todo
-- show_recent
+- show_recent [days]
 - help
 - open [id]
 
