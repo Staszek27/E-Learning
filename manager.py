@@ -169,19 +169,22 @@ def Help():
 def do_bash(bash_cmd = ['ls', '.']):
     process = subprocess.Popen(bash_cmd, stdout=subprocess.PIPE)
     output, error = process.communicate()
-    print('bash command [output: {}] [error: {}]'.format(output, error))
-    
+    # print('bash command [output: {}] [error: {}]'.format(output, error))
+    return error != None
 
-do_bash(['git', 'add', '.'])
-do_bash(['git', 'commit', '-m', '\"simple command\"'])
-exit(0)
+
 
 def Open(name):
     subprocess.Popen()
 
 
-def update_git():
-    pass # TODO
+def update_git(message = 'just an update'):
+    error = False
+    error |= do_bash(['git', 'add', '.'])
+    error |= do_bash(['git', 'commit', '-m', '\"{}\"'.format(message)])
+    error |= do_bash(['git', 'push'])
+    if error:
+        print('something went wrong with git..')
 
 
 def parsuj():
