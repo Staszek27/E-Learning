@@ -179,6 +179,7 @@ def Open(name):
 
 
 def update_git(message = 'just an update'):
+    print(message)
     error = False
     error |= do_bash(['git', 'add', '.'])
     error |= do_bash(['git', 'commit', '-m', '\"{}\"'.format(message)])
