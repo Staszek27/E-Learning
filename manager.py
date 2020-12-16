@@ -1,7 +1,7 @@
 import os
 import random
 import datetime
-import argparse
+import sys
 
 DEFAULT_DAYS     = 7
 FOLDER_ZADANIA   = 'zadania'
