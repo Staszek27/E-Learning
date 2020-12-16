@@ -192,6 +192,7 @@ def Open(name):
     do_bash(['code', os.path.join(os.getcwd(), FOLDER_ZADANIA, name)])
 
 
+
 def update_git(message = 'just an update'):
     if type(message) == type(list()):
         message = ' | '.join(message)
