@@ -199,7 +199,7 @@ def parsuj():
         print('nie rozpoznano "{}", wiec wykonuje {}..'.format(sys.argv[1], cur_arg[0]))
 
     print('{} [{}] in progress..'.format(cur_arg[0], ' & '.join(sys.argv[2:])))
-    get_command_dict()[cur_arg[0]]()
+    get_command_dict()[cur_arg[0]](sys.argv[2:])
 
 
 def get_command_dict():
