@@ -14,8 +14,8 @@ FOLDER_SLOWA     = '.funny_words.txt'
 DATE_PATTERN     = "%d/%m (%H-%M-%S)"
 
 
-def current_date(date_pattern = DATE_PATTERN):
-    return datetime.datetime.now().strftime(date_pattern)
+def current_date():
+    return datetime.datetime.now().strftime(DATE_PATTERN)
 
 
 def get_info_dict(filename = 'info.txt'):
@@ -170,11 +170,8 @@ def Help():
     print('\t- updatuje gita')
     
 
-def do_bash(bash_cmd = ['ls', '.'], stdin = None):
-    if stdin != None:
-        process = subprocess.Popen(bash_cmd, stdout=subprocess.PIPE, stdin =stdin )
-    else:
-        process = subprocess.Popen(bash_cmd, stdout=subprocess.PIPE)
+def do_bash(bash_cmd = ['ls', '.']):
+    process = subprocess.Popen(bash_cmd, stdout=subprocess.PIPE)
     output, error = process.communicate()
     # print('bash command [output: {}] [error: {}]'.format(output, error))
     return error != None

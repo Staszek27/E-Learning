@@ -27,4 +27,3 @@ za pomoca manage.py w folderze roboczym
 - add_as_material [filename] 
 - send [email]
 - done
-- show_dates

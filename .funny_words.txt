@@ -1,2 +1,2 @@
 przymiotniki : parszywy, piękny
-zwierzeta : chomik, koza
+zwierzeta : chomik, koza, asd, asdasd,
