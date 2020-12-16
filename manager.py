@@ -179,7 +179,6 @@ def Open(name):
 
 
 def update_git(message = 'just an update'):
-    print(message)
     if type(message) == type(list()):
         message = ' | '.join(message)
     error = False
