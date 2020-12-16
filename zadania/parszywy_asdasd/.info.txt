@@ -1,4 +1,0 @@
-TODO : True
-message : Just a project
-dates : 17/12 (00-06-41)
-seconds : 1608160001

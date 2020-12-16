@@ -24,7 +24,6 @@ za pomoca manage.py w biezacym folderze
 za pomoca manage.py w folderze roboczym
 
 - add [cpp / c / py / txt / in / out]
-- add_as_material [filename] 
 - help
 - send [email]
 - done
