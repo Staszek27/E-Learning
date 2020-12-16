@@ -183,7 +183,7 @@ def update_git(message = 'just an update'):
         message = ' | '.join(message)
     error = False
     error |= do_bash(['git', 'add', '.'])
-    error |= do_bash(['git', 'commit', '-m', '\"{}\"'.format(message)])
+    error |= do_bash(['git', 'commit', '-m', '{}'.format(message)])
     error |= do_bash(['git', 'push'])
     if error:
         print('something went wrong with git..')
