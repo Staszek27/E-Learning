@@ -188,17 +188,18 @@ def update_git(message = 'just an update'):
 
 
 def parsuj():
-    for arg in sys.argv[1:]:
-        cur_arg = arg
-        if cur_arg not in get_command_dict():
-            cur_arg = difflib.get_close_matches(cur_arg, list(get_command_dict().keys()))
-            if (len(cur_arg) != 1):
-                print('nie rozpoznano "{}", kontynuuje program..'.format(arg))
-                continue
-            print('nie rozpoznano "{}", wiec wykonuje {}..'.format(arg, cur_arg[0]))
 
-        print('{} in progress..'.format(cur_arg[0]))
-        get_command_dict()[cur_arg[0]]()
+    cur_arg = sys.argv[1]
+    if cur_arg not in get_command_dict():
+        cur_arg = difflib.get_close_matches(cur_arg, list(get_command_dict().keys()))
+        if (len(cur_arg) != 1):
+            print('nie rozpoznano "{}", kontynuuje program..'.format(sys.argv[1]))
+            Help()
+            return
+        print('nie rozpoznano "{}", wiec wykonuje {}..'.format(sys.argv[1], cur_arg[0]))
+
+    print('{} [{}] in progress..'.format(cur_arg[0], ' & '.join(sys.argv[2:])))
+    get_command_dict()[cur_arg[0]]()
 
 
 def get_command_dict():
