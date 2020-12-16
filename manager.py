@@ -175,10 +175,7 @@ def parsuj():
     
     for command in get_command_dict().keys():
         parser.add_argument(command)
-    print(parser)
-    args = parser.parse_args(get_command_dict().keys())
-    print(args.add_normal)
-    # TODO
+    print(sys.argv)
 
 
 def get_command_dict():
