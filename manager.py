@@ -3,6 +3,8 @@ import random
 import datetime
 import argparse
 import sys
+import difflib
+import subprocess
 
 
 DEFAULT_DAYS     = 7
@@ -164,8 +166,18 @@ def Help():
     print('\t- updatuje gita')
     
 
+def do_bash(bash_cmd = ['ls', '.']):
+    process = subprocess.Popen(bash_cmd, stdout=subprocess.PIPE)
+    output, error = process.communicate()
+    print('bash command [output: {}] [error: {}]'.format(output, error))
+    
+
+do_bash(['git', 'add', '.'])
+do_bash(['git', 'commit', '-m', '\"simple command\"'])
+exit(0)
+
 def Open(name):
-    pass # TODO
+    subprocess.Popen()
 
 
 def update_git():
@@ -173,11 +185,17 @@ def update_git():
 
 
 def parsuj():
-    parser = argparse.ArgumentParser()
-    
-    for command in get_command_dict().keys():
-        parser.add_argument(command)
-    print(sys.argv)
+    for arg in sys.argv[1:]:
+        cur_arg = arg
+        if cur_arg not in get_command_dict():
+            cur_arg = difflib.get_close_matches(cur_arg, list(get_command_dict().keys()))
+            if (len(cur_arg) != 1):
+                print('nie rozpoznano "{}", kontynuuje program..'.format(arg))
+                continue
+            print('nie rozpoznano "{}", wiec wykonuje {}..'.format(arg, cur_arg[0]))
+
+        print('{} in progress..'.format(cur_arg[0]))
+        get_command_dict()[cur_arg[0]]()
 
 
 def get_command_dict():
