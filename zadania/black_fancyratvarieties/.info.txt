@@ -1,4 +1,0 @@
-TODO : False
-message : Just a normal
-dates : 17/12 (20-28-11)
-seconds : 1608233291
