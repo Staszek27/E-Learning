@@ -9,6 +9,9 @@ This project helps in creating new projects. It has got features like
 - show projects todo
 - send project files as email
 
+I created that project for their own needs.
+Important: The project invokes bash commands.
+
 
 ### Files
 
@@ -20,7 +23,7 @@ This project helps in creating new projects. It has got features like
 
 ### Available functions
 
-use manage.py in parent directory to use functions inserted below
+##### use manage.py in parent directory to use functions inserted below
 - add_normal 
 - add_project   
 - show_todo
@@ -37,7 +40,7 @@ $ python3 manage.py add_normal
 $ python3 manage.py show_todo
 
 
-use manage.py in child directory to use functions inserted below
+##### use manage.py in child directory to use functions inserted below
 
 - add [cpp / c / py / txt / in / out]
 - help
