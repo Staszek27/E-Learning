@@ -31,7 +31,9 @@ use manage.py in parent directory to use functions inserted below
 - update_git
 
 for example:
+
 $ python3 manage.py add_normal
+
 $ python3 manage.py show_todo
 
 
