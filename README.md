@@ -1,6 +1,16 @@
-# Korepetycje
+# E-Learning (alfa version)
 
-### pliki
+### General information
+
+This project helps in creating new projects. It has got features like
+- adding new project with random name of project
+- mark done/undone projects
+- show recent projects
+- show projects todo
+- send project files as email
+
+
+### Files
 
 - README.md (czyli bieżący plik)
 - manager.py
@@ -8,9 +18,9 @@
 - zadania
 - .info.txt
 
-### dostepne funkcje
+### Available functions
 
-za pomoca manage.py w biezacym folderze
+use manage.py in parent directory to use functions inserted below
 - add_normal 
 - add_project   
 - show_todo
@@ -20,8 +30,12 @@ za pomoca manage.py w biezacym folderze
 - open [name]
 - update_git
 
+for example:
+$ python3 manage.py add_normal
+$ python3 manage.py show_todo
 
-za pomoca manage.py w folderze roboczym
+
+use manage.py in child directory to use functions inserted below
 
 - add [cpp / c / py / txt / in / out]
 - help
